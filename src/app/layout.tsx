@@ -13,6 +13,20 @@ export const metadata: Metadata = {
 	title: '303Devs | Application Development for Startups & Growing Companies',
 	description:
 		'303Devs is a Colorado-based software studio building web, mobile, and AI-powered applications for startups and growing companies. Work directly with the founder — no handoffs, no middlemen.',
+	openGraph: {
+		title: '303Devs | Application Development for Startups & Growing Companies',
+		description:
+			'Colorado-based studio building web, mobile, and software that holds up. Work directly with the founder — no handoffs, no middlemen.',
+		url: 'https://303devs.com',
+		siteName: '303Devs',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: '303Devs | Application Development for Startups & Growing Companies',
+		description:
+			'Colorado-based studio building web, mobile, and software that holds up.',
+	},
 };
 
 export default function RootLayout({
