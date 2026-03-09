@@ -135,7 +135,7 @@ export const projectItems = [
 		id: 1,
 		title: 'HealthSync',
 		des: 'A healthcare management platform covering patient registration, appointment scheduling, insurance tracking, medical history, and an admin dashboard for managing doctors and appointments.',
-		img: '/patient-portal.webp',
+		img: '/healthsync.png',
 		icons: ['/nextjs.svg', '/ts.svg', '/tail.svg', '/re.svg'],
 		link: 'https://health-sync-one.vercel.app',
 	},
