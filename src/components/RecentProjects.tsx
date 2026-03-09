@@ -1,87 +1,90 @@
 import Image from 'next/image';
-import PinContainer from './ui/3d-pin';
+import { FaArrowRight } from 'react-icons/fa';
 import { projectItems } from '@/data';
-import emblem from '../../public/emblem.svg';
 
 const RecentProjects = () => {
 	return (
 		<section
 			id='projects'
-			className='pt-12 pb-16'>
-			<h1 className='heading'>
-				A Selection of <span className='text-purple-main'>Recent Projects</span>
-			</h1>
-			<ul className='mt-6 grid grid-cols-1 gap-x-8 gap-y-8 px-4 sm:grid-cols-2 xl:gap-y-12'>
-				{projectItems.map((project) => (
-					<li
-						key={project.id}
-						className='flex h-[32rem] w-full max-w-md flex-1 items-center justify-center sm:h-[41rem] sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl'>
-						<PinContainer
-							title={project.link}
-							href={project.link}>
-							<div className='relative mb-10 flex h-[30vh] w-[80vw] items-center justify-center overflow-hidden sm:h-[20vh] sm:w-96 lg:rounded-3xl'>
-								<div className='relative h-full w-full overflow-hidden bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
-									<Image
-										src='/bg.png'
-										alt='Background Image'
-										width={400}
-										height={400}
-										className='object-cover'
-									/>
-								</div>
+			className='scroll-mt-20 py-16 md:py-24'>
+			<p className='text-xs font-semibold tracking-widest text-purple-main uppercase'>
+				Our Work
+			</p>
+			<h2 className='mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl'>
+				Recent Projects
+			</h2>
+
+			<ul className='mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8'>
+				{projectItems.map((project) => {
+					const isGitHub = project.link.includes('github.com');
+					return (
+						<li
+							key={project.id}
+							className='group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] transition-all duration-300 hover:border-purple-main/40 hover:shadow-lg dark:bg-[linear-gradient(145deg,#0C081D,#1A1F2E)] dark:hover:shadow-none'>
+							{/* Top accent line */}
+							<span className='absolute inset-x-0 top-0 z-10 h-[2px] origin-left scale-x-0 bg-purple-main transition-transform duration-300 group-hover:scale-x-100' />
+
+							{/* Image */}
+							<div className='relative h-52 w-full overflow-hidden sm:h-60'>
 								<Image
 									src={project.img}
 									alt={project.title}
-									className='absolute bottom-0 z-10 h-full w-fit rotate-3'
-									width={384}
-									height={384}
+									fill
+									sizes='(max-width: 640px) 100vw, 50vw'
+									className='object-cover object-center transition-transform duration-300 group-hover:scale-105'
 								/>
+								{/* Live badge */}
+								{!isGitHub && (
+									<span className='absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm'>
+										<span className='h-1.5 w-1.5 rounded-full bg-green-400' />
+										Live
+									</span>
+								)}
 							</div>
-							<h2 className='line-clamp-1 text-base font-semibold text-neutral-900 lg:text-xl dark:text-neutral-50'>
-								{project.title}
-							</h2>
-							<p
-								className='line-clamp-3 text-sm font-light text-neutral-700 lg:text-xl lg:font-normal dark:text-neutral-400'
-								style={{
-									margin: '1vh 0',
-								}}>
-								{project.des}
-							</p>
-							<div className='mt-7 mb-3 flex items-center justify-between'>
-								<ul className='flex items-center'>
-									{project.icons.map((icon, i) => (
-										<li
-											key={icon}
-											className='border-neutral[0.2] flex h-8 w-8 items-center justify-center rounded-full border bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] transition-colors lg:h-10 lg:w-10'
-											style={{
-												transform: `translateX(-${5 * i * 2}px)`,
-											}}>
-											<Image
-												src={icon}
-												alt={icon}
-												className='rounded-full p-2'
-												width={40}
-												height={40}
-											/>
-										</li>
-									))}
-								</ul>
-								<div className='flex items-center justify-center gap-2'>
-									<p className='text-xs text-neutral-800 lg:text-sm dark:text-neutral-200'>
-										Visit Site
-									</p>
-									<Image
-										src={emblem}
-										alt='Emblem'
-										className='ms-3 mr-2'
-										width={25}
-										height={25}
-									/>
+
+							{/* Content */}
+							<div className='flex flex-1 flex-col gap-3 p-6'>
+								<h3 className='text-lg font-semibold text-foreground'>
+									{project.title}
+								</h3>
+								<p className='text-sm leading-relaxed text-muted-foreground line-clamp-3'>
+									{project.des}
+								</p>
+
+								{/* Footer */}
+								<div className='mt-auto flex items-center justify-between pt-4'>
+									{/* Tech icons */}
+									<ul className='flex items-center'>
+										{project.icons.map((icon, i) => (
+											<li
+												key={icon}
+												className='flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background'
+												style={{ transform: `translateX(-${i * 6}px)` }}>
+												<Image
+													src={icon}
+													alt={icon}
+													width={18}
+													height={18}
+													className='rounded-full'
+												/>
+											</li>
+										))}
+									</ul>
+
+									{/* Link */}
+									<a
+										href={project.link}
+										target='_blank'
+										rel='noopener noreferrer'
+										className='flex items-center gap-2 text-sm font-medium text-purple-main transition-opacity hover:opacity-70'>
+										{isGitHub ? 'View Code' : 'Visit Site'}
+										<FaArrowRight size={12} />
+									</a>
 								</div>
 							</div>
-						</PinContainer>
-					</li>
-				))}
+						</li>
+					);
+				})}
 			</ul>
 		</section>
 	);
