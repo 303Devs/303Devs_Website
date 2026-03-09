@@ -141,6 +141,14 @@ export const projectItems = [
 	},
 	{
 		id: 2,
+		title: 'Civil Swap',
+		des: 'A multi-chain DEX aggregator supporting Ethereum, Base, Polygon, Avalanche, and Arbitrum. Gas-free trades with C4C, fee-free onboarding, and full transaction transparency — no crypto experience required.',
+		img: '/civil-swap.png',
+		icons: ['/re.svg', '/ts.svg', '/solidity.webp', '/eth.webp', '/polygon.webp'],
+		link: 'https://swap.civilprotocol.io',
+	},
+	{
+		id: 4,
 		title: 'Civil Share',
 		des: 'A Web3 crowdfunding platform where users connect wallets, create fundraising campaigns, and support causes with ETH. Built on Ethereum with Solidity smart contracts and Thirdweb.',
 		img: '/civil-protocol.webp',
@@ -148,7 +156,7 @@ export const projectItems = [
 		link: 'https://share.civilprotocol.io',
 	},
 	{
-		id: 3,
+		id: 5,
 		title: 'Civil Protocol',
 		des: 'The subscription and access portal for the Civil Protocol ecosystem. Features user authentication, subscription management, email notifications, and a real-time dashboard.',
 		img: '/civil-protocol.webp',
@@ -156,7 +164,7 @@ export const projectItems = [
 		link: 'https://github.com/303Devs/Civil_Protocol',
 	},
 	{
-		id: 4,
+		id: 6,
 		title: 'VirtualStitch',
 		des: 'A 3D apparel customization platform with AI-generated designs. Describe your vision and see it applied to a real-time 3D t-shirt model, powered by OpenAI and Three.js.',
 		img: '/bashful-elephant.webp',
@@ -164,7 +172,7 @@ export const projectItems = [
 		link: 'https://github.com/303Devs/VirtualStitch',
 	},
 	{
-		id: 5,
+		id: 7,
 		title: 'CampingBuddy',
 		des: 'A full-featured outdoor trip planning app with AI-powered packing lists, meal planning, gear recommendations, interactive trail maps, weather forecasts, campsite reviews, and a gear swap marketplace.',
 		img: '/vision.webp',
@@ -172,7 +180,7 @@ export const projectItems = [
 		link: 'https://github.com/303Devs/CampingBuddy',
 	},
 	{
-		id: 6,
+		id: 8,
 		title: 'Sherwood Forest',
 		des: 'A React Native mobile banking app with five core modules: home dashboard, crypto portfolio, investments, lifestyle spending, and money transfers. Built with Expo and Clerk authentication.',
 		img: '/bg.png',
@@ -180,7 +188,7 @@ export const projectItems = [
 		link: 'https://github.com/303Devs/Sherwood_Forest',
 	},
 	{
-		id: 7,
+		id: 9,
 		title: 'MyHealthCoach',
 		des: 'A health and fitness tracking app with workout logging, calorie tracking, and progress visualization. Full-stack PERN application with Docker support, CI/CD pipeline, and Jest test coverage.',
 		img: '/my-health-coach.webp',
@@ -188,7 +196,7 @@ export const projectItems = [
 		link: 'https://github.com/303Devs/MyHealthCoach',
 	},
 	{
-		id: 8,
+		id: 10,
 		title: 'Red Bean Shop',
 		des: 'An e-commerce platform featuring a dynamic product overview with image galleries, ratings, related items, and a shopping cart. Built with React, Node.js, Redis, Nginx, and MongoDB.',
 		img: '/atelier.webp',
