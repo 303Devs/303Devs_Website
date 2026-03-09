@@ -10,6 +10,7 @@ const redHat = Red_Hat_Text({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://303devs.com'),
 	title: '303Devs | Application Development for Startups & Growing Companies',
 	description:
 		'303Devs is a Colorado-based software studio building web, mobile, and AI-powered applications for startups and growing companies. Work directly with the founder — no handoffs, no middlemen.',
