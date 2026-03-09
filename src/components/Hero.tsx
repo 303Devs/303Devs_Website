@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaLocationArrow } from 'react-icons/fa';
+import { FaLocationArrow, FaCalendarAlt } from 'react-icons/fa';
 
 import MagicButton from './ui/magic-button';
 import { Spotlight } from './ui/Spotlight';
@@ -42,7 +42,7 @@ const Hero = () => {
 				<section className='flex justify-center py-10 md:py-14 lg:py-20 xl:py-24'>
 					<div className='flex flex-col items-center justify-center text-center md:max-w-2xl lg:max-w-[60vw]'>
 						<h2 className='text-xs tracking-widest text-muted-foreground uppercase'>
-							Web &middot; Mobile &middot; Software
+							Application Development for Startups &amp; Growing Companies
 						</h2>
 
 						<TextGenerate
@@ -69,15 +69,26 @@ const Hero = () => {
 							{'— a Colorado-based studio building web, mobile, and software that holds up.'}
 						</p>
 
-						<a
-							href='#projects'
-							aria-label='View our recent projects'>
-							<MagicButton
-								title='View Our Work'
-								icon={<FaLocationArrow />}
-								position='right'
-							/>
-						</a>
+						<div className='flex flex-col items-center gap-4 sm:flex-row sm:justify-center'>
+							<a
+								href='#projects'
+								aria-label='View our recent projects'>
+								<MagicButton
+									title='View Our Work'
+									icon={<FaLocationArrow />}
+									position='right'
+								/>
+							</a>
+							<a
+								href='https://calendly.com/anthony-303devs/30min'
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Book a free discovery call'
+								className='flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-border'>
+								<FaCalendarAlt />
+								Book a Free Call
+							</a>
+						</div>
 					</div>
 				</section>
 			</div>

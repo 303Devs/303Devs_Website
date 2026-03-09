@@ -1,8 +1,11 @@
 import React from 'react';
 import FloatingNav from '@/components/ui/floating-nav';
-import Grid from '@/components/Grid';
 import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Grid from '@/components/Grid';
+import Process from '@/components/Process';
 import RecentProjects from '@/components/RecentProjects';
+import Contact from '@/components/Contact';
 import { navItems } from '@/data';
 
 const Home = () => {
@@ -11,8 +14,11 @@ const Home = () => {
 			<div className='w-full max-w-7xl'>
 				<FloatingNav navItems={navItems} />
 				<Hero />
+				<About />
 				<Grid />
+				<Process />
 				<RecentProjects />
+				<Contact />
 			</div>
 		</main>
 	);

@@ -10,8 +10,9 @@ const redHat = Red_Hat_Text({
 });
 
 export const metadata: Metadata = {
-	title: '303Devs',
-	description: 'A Colorado studio making tech personal.',
+	title: '303Devs | Application Development for Startups & Growing Companies',
+	description:
+		'303Devs is a Colorado-based software studio building web, mobile, and AI-powered applications for startups and growing companies. Work directly with the founder — no handoffs, no middlemen.',
 };
 
 export default function RootLayout({

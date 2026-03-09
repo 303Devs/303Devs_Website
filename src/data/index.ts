@@ -1,7 +1,8 @@
 export const navItems = [
 	{ name: 'About', link: '#about' },
+	{ name: 'Services', link: '#services' },
+	{ name: 'Process', link: '#process' },
 	{ name: 'Projects', link: '#projects' },
-	{ name: 'Stack', link: '#stack' },
 	{ name: 'Contact', link: '#contact' },
 ];
 
@@ -20,7 +21,8 @@ export const gridItems = [
 	{
 		id: 2,
 		title: 'Remote-first. Always in sync.',
-		description: '',
+		description:
+			'Async-friendly and responsive. We keep you informed at every stage regardless of where you are.',
 		className:
 			'min-h-[280px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
@@ -42,7 +44,7 @@ export const gridItems = [
 	{
 		id: 4,
 		title: 'Technical depth that drives real outcomes.',
-		description: '',
+		description: 'JS, TS, and Node are home base. AI integration and Web3 are the frontier.',
 		className:
 			'min-h-[200px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-1',
 		imgClassName: 'bg-transparent',
@@ -52,8 +54,8 @@ export const gridItems = [
 	},
 	{
 		id: 5,
-		title: 'We build software that scales with your business.',
-		description: 'How We Work',
+		title: 'You work directly with the founder. No handoffs, no middlemen, no surprises.',
+		description: 'The 303Devs Difference',
 		className:
 			'min-h-[280px] md:min-h-0 lg:col-span-3 md:col-span-3 md:row-span-2',
 		imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60 blur-[2px]',
@@ -63,7 +65,7 @@ export const gridItems = [
 	},
 	{
 		id: 6,
-		title: 'Ready to Start Your Next Project?',
+		title: 'Ready to build something real?',
 		description: '',
 		className:
 			'min-h-[200px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-1',

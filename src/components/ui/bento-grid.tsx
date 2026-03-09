@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
-import { IoCopyOutline } from 'react-icons/io5';
+import { FaLocationArrow } from 'react-icons/fa';
 
 import { cn } from '@/lib/utils';
 import MagicButton from './magic-button';
@@ -12,7 +11,6 @@ import { BackgroundGradient } from './gradient-bg';
 import { BackgroundBeams } from './beams-bg';
 import { mapDots } from '@/data';
 import { WorldMap } from './world-map';
-import Confetti from './confetti-client';
 
 export const BentoGrid = ({
 	className,
@@ -51,8 +49,6 @@ export const BentoGridItem = ({
 	titleClassName,
 	spareImg,
 }: BentoGridItemProps) => {
-	const [copied, setCopied] = useState(false);
-
 	const services = [
 		'Development',
 		'AI Integration',
@@ -64,11 +60,6 @@ export const BentoGridItem = ({
 		'Web3',
 		'Design',
 	];
-
-	const handleCopy = () => {
-		navigator.clipboard.writeText('anthony@303devs.com');
-		setCopied(true);
-	};
 
 	return (
 		<div
@@ -122,10 +113,10 @@ export const BentoGridItem = ({
 					{description && (
 						<div
 							className={cn(
-								'z-10 font-sans text-base font-light md:max-w-32 lg:text-lg',
+								'z-10 font-sans text-sm font-light lg:text-base',
 								id === 6 || id === 1 ?
 									'text-white drop-shadow-sm'
-								:	'text-foreground'
+								:	'text-muted-foreground'
 							)}>
 							{description}
 						</div>
@@ -158,17 +149,16 @@ export const BentoGridItem = ({
 					)}
 				</div>
 			</div>
+
 			{id === 6 && (
 				<div className='relative z-10 mt-6 mb-10 flex justify-center'>
-					<div className='absolute right-0 -bottom-5'>
-						<Confetti copied={copied} />
-					</div>
-					<MagicButton
-						title={copied ? 'You Got It!' : 'Grab Our Email'}
-						icon={<IoCopyOutline />}
-						position='left'
-						handleClick={handleCopy}
-					/>
+					<a href='#contact'>
+						<MagicButton
+							title="Let's Talk"
+							icon={<FaLocationArrow />}
+							position='right'
+						/>
+					</a>
 				</div>
 			)}
 		</div>
