@@ -1,5 +1,4 @@
 'use client';
-import { useHasMounted } from '@/hooks/useHasMounted';
 import { useState } from 'react';
 import {
 	motion,
@@ -10,8 +9,6 @@ import {
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 
 const FloatingNav = ({
 	navItems,
@@ -25,11 +22,7 @@ const FloatingNav = ({
 	className?: string;
 }) => {
 	const { scrollYProgress } = useScroll();
-	const { theme, setTheme } = useTheme();
-
 	const [visible, setVisible] = useState(false);
-
-	const hasMounted = useHasMounted();
 
 	useMotionValueEvent(scrollYProgress, 'change', (current) => {
 		if (typeof current === 'number') {
@@ -88,16 +81,6 @@ const FloatingNav = ({
 							<span className='!cursor-pointer text-sm'>{navItem.name}</span>
 						</Link>
 					)
-				)}
-				{hasMounted && (
-					<button
-						onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-						className='ml-2 rounded p-1 text-muted-foreground transition hover:text-foreground'
-						aria-label='Toggle theme'>
-						{theme === 'light' ?
-							<MoonIcon className='h-4 w-4' />
-						:	<SunIcon className='h-4 w-4' />}
-					</button>
 				)}
 			</motion.div>
 		</AnimatePresence>
