@@ -8,19 +8,21 @@ export const navItems = [
 export const gridItems = [
 	{
 		id: 1,
-		title: 'Every project starts with understanding your vision.',
+		title: 'We start with your goals, not our assumptions.',
 		description: '',
-		className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[0vh]',
-		imgClassName: 'h-full w-full ',
+		className:
+			'min-h-[320px] md:min-h-0 lg:col-span-3 md:col-span-6 md:row-span-4',
+		imgClassName: 'h-full w-full',
 		titleClassName: 'justify-end',
 		img: '/vision.webp',
 		spareImg: '',
 	},
 	{
 		id: 2,
-		title: 'Effortless Collaboration Across Borders',
+		title: 'Remote-first. Always in sync.',
 		description: '',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
+		className:
+			'min-h-[280px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
 		titleClassName: 'justify-start',
 		img: '',
@@ -29,8 +31,9 @@ export const gridItems = [
 	{
 		id: 3,
 		title: 'Our Services',
-		description: 'Good work feels calm, not chaotic.',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
+		description: 'We handle the complexity. You stay focused.',
+		className:
+			'min-h-[280px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
 		titleClassName: '',
 		img: '',
@@ -38,21 +41,21 @@ export const gridItems = [
 	},
 	{
 		id: 4,
-		title: 'Turning Passion for Tech Into Real-World Solutions',
+		title: 'Technical depth that drives real outcomes.',
 		description: '',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
+		className:
+			'min-h-[200px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-1',
 		imgClassName: 'bg-transparent',
 		titleClassName: 'justify-start',
 		img: '',
 		spareImg: '/b4.svg',
 	},
-
 	{
 		id: 5,
-		title:
-			'Build thoughtful digital solutions that move people and ideas forward.',
-		description: 'Our Master Plan',
-		className: 'md:col-span-3 md:row-span-2',
+		title: 'We build software that scales with your business.',
+		description: 'How We Work',
+		className:
+			'min-h-[280px] md:min-h-0 lg:col-span-3 md:col-span-3 md:row-span-2',
 		imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60 blur-[2px]',
 		titleClassName: 'justify-center md:justify-start lg:justify-center',
 		img: '/b5.svg',
@@ -60,9 +63,10 @@ export const gridItems = [
 	},
 	{
 		id: 6,
-		title: 'Ready to Bring Your Ideas to Life?',
+		title: 'Ready to Start Your Next Project?',
 		description: '',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
+		className:
+			'min-h-[200px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-1',
 		imgClassName: '',
 		titleClassName:
 			'justify-center md:max-w-full max-w-60 text-center text-white drop-shadow-md',

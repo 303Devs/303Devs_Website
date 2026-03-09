@@ -1,27 +1,9 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PinContainer from './ui/3d-pin';
 import { projectItems } from '@/data';
 import emblem from '../../public/emblem.svg';
 
-// Assuming dynamic data or browser-dependent features
 const RecentProjects = () => {
-	const [projects, setProjects] = useState<Project[]>([]);
-	const [isClient, setIsClient] = useState(false);
-
-	//Ensure hydration compatibility for browser-specific logic
-	useEffect(() => {
-		setIsClient(true); // Mark as client-rendered
-		setProjects(projectItems);
-	}, []);
-
-	// Placeholder for SSR: return a loading state or static fallback content
-	if (!isClient) {
-		return <div>Loading recent projects...</div>;
-	}
-
 	return (
 		<section
 			id='projects'
@@ -30,14 +12,14 @@ const RecentProjects = () => {
 				A Selection of <span className='text-purple-main'>Recent Projects</span>
 			</h1>
 			<ul className='mt-6 grid grid-cols-1 gap-x-8 gap-y-8 px-4 sm:grid-cols-2 xl:gap-y-12'>
-				{projects.map((project) => (
+				{projectItems.map((project) => (
 					<li
 						key={project.id}
 						className='flex h-[32rem] w-full max-w-md flex-1 items-center justify-center sm:h-[41rem] sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl'>
 						<PinContainer
 							title={project.link}
 							href={project.link}>
-							<div className='w-[80vw relative mb-10 flex h-[30vh] items-center justify-center overflow-hidden sm:h-[20vh] sm:w-96 lg:rounded-3xl'>
+							<div className='relative mb-10 flex h-[30vh] w-[80vw] items-center justify-center overflow-hidden sm:h-[20vh] sm:w-96 lg:rounded-3xl'>
 								<div className='relative h-full w-full overflow-hidden bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
 									<Image
 										src='/bg.png'

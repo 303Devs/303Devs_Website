@@ -3,7 +3,7 @@ import { FaLocationArrow } from 'react-icons/fa';
 
 import MagicButton from './ui/magic-button';
 import { Spotlight } from './ui/Spotlight';
-import { TextGenerate } from './ui/text-generate.tsx';
+import { TextGenerate } from './ui/text-generate';
 import { Vortex } from './ui/vortex';
 
 import LogoDark from '../../public/logo-horz-trans.svg';
@@ -42,16 +42,16 @@ const Hero = () => {
 				<section className='flex justify-center py-10 md:py-14 lg:py-20 xl:py-24'>
 					<div className='flex flex-col items-center justify-center text-center md:max-w-2xl lg:max-w-[60vw]'>
 						<h2 className='text-xs tracking-widest text-muted-foreground uppercase'>
-							Web, mobile, and software systems — built with care.
+							Web &middot; Mobile &middot; Software
 						</h2>
 
 						<TextGenerate
 							className='mt-6 heading-xl text-foreground md:mt-8'
-							words={'Inspired Solutions,\nLasting Impressions.'}
+							words={'Built Right,\nFrom Day One.'}
 						/>
 
 						<p className='mt-6 mb-10 flex max-w-full flex-wrap items-center justify-center gap-2 text-lg font-medium tracking-wide md:mt-8 md:text-xl lg:text-2xl'>
-							We’re
+							{"We're"}
 							<Image
 								src={LogoDark}
 								alt='303Devs - Colorado-based web, mobile, and software development studio'
@@ -66,14 +66,14 @@ const Hero = () => {
 								priority
 								role='img'
 							/>
-							— a Colorado studio making tech personal.
+							{'— a Colorado-based studio building web, mobile, and software that holds up.'}
 						</p>
 
 						<a
-							href='#about'
-							aria-label='Navigate to about section'>
+							href='#projects'
+							aria-label='View our recent projects'>
 							<MagicButton
-								title='Step Inside'
+								title='View Our Work'
 								icon={<FaLocationArrow />}
 								position='right'
 							/>

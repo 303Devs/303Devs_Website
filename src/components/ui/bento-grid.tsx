@@ -53,8 +53,17 @@ export const BentoGridItem = ({
 }: BentoGridItemProps) => {
 	const [copied, setCopied] = useState(false);
 
-	const leftStackList = ['Development', 'DevOps', 'Web3'];
-	const rightStackList = ['Architecture', 'Consulting', 'Design'];
+	const services = [
+		'Development',
+		'AI Integration',
+		'SaaS Development',
+		'Mobile',
+		'Architecture',
+		'DevOps',
+		'Consulting',
+		'Web3',
+		'Design',
+	];
 
 	const handleCopy = () => {
 		navigator.clipboard.writeText('anthony@303devs.com');
@@ -137,25 +146,14 @@ export const BentoGridItem = ({
 					{id === 3 && (
 						<div
 							aria-label='Technology stack'
-							className='absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-4'>
-							<div className='flex flex-col gap-3 lg:gap-7'>
-								{leftStackList.map((item, i) => (
-									<span
-										key={i}
-										className='inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-border bg-[linear-gradient(110deg,#F1F2F6,45%,#E0E3F1,55%,#F1F2F6)] bg-[length:200%_100%] px-6 font-medium text-foreground transition-colors focus:ring-2 focus:ring-muted-foreground focus:ring-offset-2 focus:ring-offset-background dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
-										{item}
-									</span>
-								))}
-							</div>
-							<div className='-mt-6 flex flex-col gap-3 sm:-mt-2 lg:-mt-10 lg:gap-7'>
-								{rightStackList.map((item, i) => (
-									<span
-										key={`${item}-${i}`}
-										className='inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-border bg-[linear-gradient(110deg,#F1F2F6,45%,#E0E3F1,55%,#F1F2F6)] bg-[length:200%_100%] px-6 font-medium text-foreground transition-colors focus:ring-2 focus:ring-muted-foreground focus:ring-offset-2 focus:ring-offset-background focus:outline-hidden dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
-										{item}
-									</span>
-								))}
-							</div>
+							className='z-10 mt-4 flex flex-wrap gap-2'>
+							{services.map((item) => (
+								<span
+									key={item}
+									className='inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-border bg-[linear-gradient(110deg,#F1F2F6,45%,#E0E3F1,55%,#F1F2F6)] bg-[length:200%_100%] px-5 font-medium text-foreground transition-colors dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
+									{item}
+								</span>
+							))}
 						</div>
 					)}
 				</div>

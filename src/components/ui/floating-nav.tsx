@@ -20,7 +20,7 @@ const FloatingNav = ({
 	navItems: {
 		name: string;
 		link: string;
-		icon?: JSX.Element;
+		icon?: React.ReactElement;
 	}[];
 	className?: string;
 }) => {
@@ -75,7 +75,7 @@ const FloatingNav = ({
 
 				{navItems.map(
 					(
-						navItem: { name: string; link: string; icon?: JSX.Element },
+						navItem: { name: string; link: string; icon?: React.ReactElement },
 						idx: number
 					) => (
 						<Link
