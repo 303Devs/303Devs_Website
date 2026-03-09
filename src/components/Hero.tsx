@@ -25,7 +25,7 @@ const Hero = () => {
 		<Vortex
 			backgroundColor='transparent'
 			rangeY={800}
-			particleCount={500}
+			particleCount={150}
 			className='flex h-screen w-full flex-col items-center justify-center'>
 			<div className='py-20'>
 				{SPOTLIGHTS.map((props, i) => (
