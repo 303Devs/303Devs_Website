@@ -1,13 +1,9 @@
-import Image from 'next/image';
 import { FaLocationArrow, FaCalendarAlt } from 'react-icons/fa';
 
 import MagicButton from './ui/magic-button';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerate } from './ui/text-generate';
 import { Vortex } from './ui/vortex';
-
-import LogoDark from '../../public/logo-horz-trans.svg';
-import LogoLight from '../../public/hoz-trans-dark.png';
 
 const SPOTLIGHTS = [
 	{
@@ -50,23 +46,8 @@ const Hero = () => {
 							words={'Built Right,\nFrom Day One.'}
 						/>
 
-						<p className='mt-6 mb-10 flex max-w-full flex-wrap items-center justify-center gap-2 text-lg font-medium tracking-wide md:mt-8 md:text-xl lg:text-2xl'>
-							{"We're"}
-							<Image
-								src={LogoDark}
-								alt='303Devs - Colorado-based web, mobile, and software development studio'
-								className='hidden h-[2.25em] w-auto pb-[0.4em] dark:inline-block'
-								priority
-								role='img'
-							/>
-							<Image
-								src={LogoLight}
-								alt='303Devs - Colorado-based web, mobile, and software development studio'
-								className='mt-2 inline-block h-[6.5em] w-auto dark:hidden'
-								priority
-								role='img'
-							/>
-							{'— a Colorado-based studio building web, mobile, and software that holds up.'}
+						<p className='mt-6 mb-10 max-w-xl text-center text-lg text-muted-foreground md:mt-8 md:text-xl lg:text-2xl'>
+							Colorado-based studio building web, mobile, and software that holds up.
 						</p>
 
 						<div className='flex flex-col items-center gap-4 sm:flex-row sm:justify-center'>

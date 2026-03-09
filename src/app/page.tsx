@@ -6,6 +6,7 @@ import Grid from '@/components/Grid';
 import Process from '@/components/Process';
 import RecentProjects from '@/components/RecentProjects';
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 import { navItems } from '@/data';
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
 				<Process />
 				<RecentProjects />
 				<Contact />
+				<Footer />
 			</div>
 		</main>
 	);
