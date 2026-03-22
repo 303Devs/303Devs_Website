@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
@@ -9,6 +10,12 @@ const Footer = () => {
 				</p>
 
 				<div className='flex items-center gap-6'>
+					<Link
+						href='/privacy'
+						className='text-sm text-muted-foreground transition-colors hover:text-foreground'>
+						Privacy Policy
+					</Link>
+
 					<a
 						href='mailto:anthony@303devs.com'
 						className='text-sm text-muted-foreground transition-colors hover:text-foreground'>
