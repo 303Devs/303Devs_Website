@@ -151,7 +151,7 @@ export const projectItems = [
 		id: 4,
 		title: 'Civil Share',
 		des: 'A Web3 crowdfunding platform where users connect wallets, create fundraising campaigns, and support causes with ETH — no crypto experience required.',
-		img: '/civil-protocol.webp',
+		img: '/civil-share.png',
 		icons: ['/re.svg', '/tail.svg', '/ts.svg', '/solidity.webp', '/eth.webp'],
 		link: 'https://share.civilprotocol.io',
 	},
