@@ -161,7 +161,7 @@ export const projectItems = [
 		des: 'The hub of the Civil Protocol ecosystem — manage your subscription, access dApps, and track activity across Civil Swap and Civil Share from a single unified dashboard.',
 		img: '/civil-protocol.webp',
 		icons: ['/re.svg', '/ts.svg', '/express.webp', '/drizzle.webp'],
-		link: 'https://github.com/303Devs/Civil_Protocol',
+		link: 'https://civilprotocol.io',
 	},
 	{
 		id: 6,
