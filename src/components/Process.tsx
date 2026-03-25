@@ -1,39 +1,43 @@
+'use client';
+
+import { motion } from 'motion/react';
+
 const steps = [
 	{
 		number: '01',
 		title: 'Discovery',
 		description:
-			'We start with a conversation — not a contract. What problem are you solving? Who are the stakeholders? What does success actually look like? No code, no wireframes. Just listening.',
+			'I start with a conversation — not a contract. What problem are you solving, and what does success actually look like?',
 	},
 	{
 		number: '02',
 		title: 'Define',
 		description:
-			'We narrow everything down to a clear, shared understanding of what we are building and why. Scope, priorities, and constraints get locked in before anything else moves forward.',
+			'Scope, priorities, and constraints get locked in before anything moves forward. No ambiguity at this stage means no surprises later.',
 	},
 	{
 		number: '03',
 		title: 'Design',
 		description:
-			'Mockups, user flows, and architecture diagrams. You see exactly what you are getting before a single line of production code is written. Changes here cost nothing.',
+			'Mockups, user flows, and architecture diagrams — you see exactly what you are getting before a line of production code is written.',
 	},
 	{
 		number: '04',
 		title: 'Build',
 		description:
-			'Iterative development with regular demos. You stay in the loop at every stage — no disappearing for weeks and emerging with something unrecognizable. Your feedback shapes the build in real time.',
+			'Iterative development with regular demos. Your feedback shapes the build in real time — no disappearing for weeks.',
 	},
 	{
 		number: '05',
 		title: 'Refine',
 		description:
-			'Edge cases, polish, performance. We close the gap between "it works" and "it is ready." This is where the details that matter to real users get handled.',
+			'Edge cases, polish, performance. This is where the gap between "it works" and "it is ready" gets closed.',
 	},
 	{
 		number: '06',
 		title: 'Launch & Support',
 		description:
-			'We ship it together and watch how it performs. Post-launch support is not an afterthought — it is part of the engagement.',
+			'I handle deployment, monitor for issues, and stay available for bug fixes and small improvements in the weeks after launch.',
 	},
 ];
 
@@ -41,10 +45,15 @@ const Process = () => {
 	return (
 		<section
 			id='process'
-			className='scroll-mt-20 py-16 md:py-24'>
-			<div className='text-center'>
+			className='scroll-mt-20 py-8 md:py-14'>
+			<motion.div
+				initial={{ opacity: 0, y: 12 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.5 }}
+				className='text-center'>
 				<p className='text-xs font-semibold tracking-widest text-purple-main uppercase'>
-					How We Work
+					How I Work
 				</p>
 				<h2 className='mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl'>
 					A Process Built Around Clarity
@@ -54,23 +63,27 @@ const Process = () => {
 					step here is designed to keep you informed, in control, and confident
 					in what is being built.
 				</p>
-			</div>
+			</motion.div>
 
-			<div className='mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-				{steps.map((step) => (
-					<div
+			<div className='mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+				{steps.map((step, i) => (
+					<motion.div
 						key={step.number}
-						className='relative flex flex-col gap-3 rounded-3xl border border-border bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] p-8 dark:bg-[linear-gradient(145deg,#0C081D,#1A1F2E)]'>
-						<span className='text-4xl font-black tracking-tight text-purple-main opacity-40'>
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.4, delay: i * 0.07 }}
+						className='group relative flex flex-col gap-3 rounded-2xl border border-border bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] p-8 transition-all duration-300 hover:border-purple-main/30 dark:bg-[linear-gradient(145deg,#0C081D,#1A1F2E)]'>
+						<span className='text-4xl font-black tracking-tight text-purple-main opacity-30'>
 							{step.number}
 						</span>
-						<h3 className='text-lg font-semibold text-foreground'>
+						<h3 className='text-base font-semibold text-foreground'>
 							{step.title}
 						</h3>
 						<p className='text-sm leading-relaxed text-muted-foreground'>
 							{step.description}
 						</p>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</section>

@@ -6,15 +6,15 @@ const RecentProjects = () => {
 	return (
 		<section
 			id='projects'
-			className='scroll-mt-20 py-16 md:py-24'>
+			className='scroll-mt-20 py-8 md:py-14'>
 			<p className='text-xs font-semibold tracking-widest text-purple-main uppercase'>
-				Our Work
+				My Work
 			</p>
 			<h2 className='mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl'>
 				Recent Projects
 			</h2>
 
-			<ul className='mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8'>
+			<ul className='mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2'>
 				{projectItems.map((project) => {
 					const isGitHub = project.link.includes('github.com');
 					return (

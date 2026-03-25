@@ -1,9 +1,10 @@
+'use client';
+
+import { motion } from 'motion/react';
 import { FaLocationArrow, FaCalendarAlt } from 'react-icons/fa';
 
 import MagicButton from './ui/magic-button';
 import { Spotlight } from './ui/Spotlight';
-import { TextGenerate } from './ui/text-generate';
-import { Vortex } from './ui/vortex';
 
 const SPOTLIGHTS = [
 	{
@@ -22,58 +23,77 @@ const SPOTLIGHTS = [
 
 const Hero = () => {
 	return (
-		<Vortex
-			backgroundColor='transparent'
-			rangeY={800}
-			particleCount={150}
-			className='flex h-screen w-full flex-col items-center justify-center'>
-			<div className='py-20'>
-				{SPOTLIGHTS.map((props, i) => (
-					<Spotlight
-						key={i}
-						{...props}
-					/>
-				))}
+		<section className='relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden'>
+			{SPOTLIGHTS.map((props, i) => (
+				<Spotlight
+					key={i}
+					{...props}
+				/>
+			))}
 
-				<section className='flex justify-center py-10 md:py-14 lg:py-20 xl:py-24'>
-					<div className='flex flex-col items-center justify-center text-center md:max-w-2xl lg:max-w-[60vw]'>
-						<h2 className='text-xs tracking-widest text-muted-foreground uppercase'>
-							Application Development for Startups &amp; Growing Companies
-						</h2>
+			{/* Subtle grid texture */}
+			<div className='pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(147,0,243,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(147,0,243,0.04)_1px,transparent_1px)] bg-[size:64px_64px]' />
 
-						<TextGenerate
-							className='mt-6 heading-xl text-foreground md:mt-8'
-							words={'Built Right,\nFrom Day One.'}
+			<div className='relative z-10 flex flex-col items-center justify-center px-4 py-12 text-center'>
+				{/* Badge */}
+				<motion.div
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5 }}
+					className='mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-1.5 text-xs font-semibold tracking-widest text-muted-foreground uppercase backdrop-blur-sm'>
+					<span className='h-1.5 w-1.5 rounded-full bg-purple-main' />
+					Independent Developer · Boulder, CO
+				</motion.div>
+
+				{/* Headline */}
+				<motion.h1
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.1 }}
+					className='heading-xl max-w-3xl text-foreground'>
+					Built Right,
+					<br />
+					From Day One.
+				</motion.h1>
+
+				{/* Subhead */}
+				<motion.p
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.2 }}
+					className='mt-6 max-w-xl text-lg text-muted-foreground md:text-xl'>
+					Software built to last — by one developer in Colorado who stays
+					accountable.
+				</motion.p>
+
+				{/* CTAs */}
+				<motion.div
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.3 }}
+					className='mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center'>
+					<a
+						href='#projects'
+						aria-label='View my recent projects'>
+						<MagicButton
+							title='View My Work'
+							icon={<FaLocationArrow />}
+							position='right'
 						/>
+					</a>
+					<a
+						href='https://calendly.com/anthony-303devs/30min'
+						target='_blank'
+						rel='noopener noreferrer'
+						aria-label='Book a free discovery call'
+						className='flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-purple-main/40 hover:bg-border'>
+						<FaCalendarAlt />
+						Book a Free Call
+					</a>
+				</motion.div>
 
-						<p className='mt-6 mb-10 max-w-xl text-center text-lg text-muted-foreground md:mt-8 md:text-xl lg:text-2xl'>
-							Colorado-based studio building web, mobile, and software that holds up.
-						</p>
-
-						<div className='flex flex-col items-center gap-4 sm:flex-row sm:justify-center'>
-							<a
-								href='#projects'
-								aria-label='View our recent projects'>
-								<MagicButton
-									title='View Our Work'
-									icon={<FaLocationArrow />}
-									position='right'
-								/>
-							</a>
-							<a
-								href='https://calendly.com/anthony-303devs/30min'
-								target='_blank'
-								rel='noopener noreferrer'
-								aria-label='Book a free discovery call'
-								className='flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-border'>
-								<FaCalendarAlt />
-								Book a Free Call
-							</a>
-						</div>
-					</div>
-				</section>
-			</div>
-		</Vortex>
+				</div>
+		</section>
 	);
 };
 

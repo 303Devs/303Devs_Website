@@ -9,7 +9,7 @@ export const navItems = [
 export const gridItems = [
 	{
 		id: 1,
-		title: 'We start with your goals, not our assumptions.',
+		title: 'I start with your goals, not my assumptions.',
 		description: '',
 		className:
 			'min-h-[320px] md:min-h-0 lg:col-span-3 md:col-span-6 md:row-span-4',
@@ -22,7 +22,7 @@ export const gridItems = [
 		id: 2,
 		title: 'Remote-first. Always in sync.',
 		description:
-			'Async-friendly and responsive. We keep you informed at every stage regardless of where you are.',
+			'Async-friendly and responsive. I keep you informed at every stage regardless of where you are.',
 		className:
 			'min-h-[280px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
@@ -32,8 +32,8 @@ export const gridItems = [
 	},
 	{
 		id: 3,
-		title: 'Our Services',
-		description: 'We handle the complexity. You stay focused.',
+		title: 'My Services',
+		description: 'I handle the complexity. You stay focused.',
 		className:
 			'min-h-[280px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
@@ -44,7 +44,7 @@ export const gridItems = [
 	{
 		id: 4,
 		title: 'Technical depth that drives real outcomes.',
-		description: 'JS, TS, and Node are home base. AI integration and Web3 are the frontier.',
+		description: 'JS, TS, and Node are home base. AI integration is the frontier.',
 		className:
 			'min-h-[200px] md:min-h-0 lg:col-span-2 md:col-span-3 md:row-span-1',
 		imgClassName: 'bg-transparent',
@@ -133,38 +133,30 @@ export const mapDots = [
 export const projectItems = [
 	{
 		id: 1,
-		title: 'HealthSync',
-		des: 'A healthcare management platform covering patient registration, appointment scheduling, insurance tracking, medical history, and an admin dashboard for managing doctors and appointments.',
-		img: '/healthsync.png',
-		icons: ['/nextjs.svg', '/ts.svg', '/tail.svg', '/re.svg'],
-		link: 'https://healthsync.303devs.com',
-	},
-	{
-		id: 2,
 		title: 'Civil Swap',
 		des: 'A multi-chain DEX aggregator supporting Ethereum, Base, Polygon, Avalanche, and Arbitrum. Gas-free trades with C4C, fee-free onboarding, and full transaction transparency — no crypto experience required.',
 		img: '/civil-swap.png',
-		icons: ['/re.svg', '/ts.svg', '/solidity.webp', '/eth.webp', '/polygon.webp'],
+		icons: ['/re.svg', '/ts.svg', '/tail.svg', '/solidity.webp', '/eth.webp'],
 		link: 'https://swap.civilprotocol.io',
 	},
 	{
-		id: 4,
+		id: 6,
 		title: 'Civil Share',
 		des: 'A Web3 crowdfunding platform where users connect wallets, create fundraising campaigns, and support causes with ETH — no crypto experience required.',
 		img: '/civil-share.png',
-		icons: ['/re.svg', '/tail.svg', '/ts.svg', '/solidity.webp', '/eth.webp'],
+		icons: ['/re.svg', '/tail.svg', '/solidity.webp', '/eth.webp'],
 		link: 'https://share.civilprotocol.io',
 	},
 	{
-		id: 5,
-		title: 'Civil Protocol',
-		des: 'The hub of the Civil Protocol ecosystem — manage your subscription, access dApps, and track activity across Civil Swap and Civil Share from a single unified dashboard.',
-		img: '/civil-protocol-new.png',
-		icons: ['/re.svg', '/ts.svg', '/express.webp', '/drizzle.webp'],
-		link: 'https://civilprotocol.io',
+		id: 2,
+		title: 'HealthSync',
+		des: 'A healthcare management platform where patients register, book appointments, and track their medical history — with a dedicated admin dashboard for managing doctors and schedules.',
+		img: '/healthsync.png',
+		icons: ['/nextjs.svg', '/ts.svg', '/tail.svg'],
+		link: 'https://healthsync.303devs.com',
 	},
 	{
-		id: 6,
+		id: 3,
 		title: 'VirtualStitch',
 		des: 'Design custom apparel in seconds. Describe your vision and watch AI bring it to life on a real-time 3D t-shirt — then order it.',
 		img: '/virtualstitch.png',
@@ -172,35 +164,19 @@ export const projectItems = [
 		link: 'https://virtual-stitch.303devs.com',
 	},
 	{
-		id: 7,
+		id: 4,
 		title: 'CampingBuddy',
-		des: 'Plan your perfect trip outdoors. AI-powered packing lists, meal planning, gear recommendations, trail maps, weather forecasts, campsite reviews, and a gear swap marketplace — all in one place.',
+		des: 'Plan your perfect outdoor trip — AI-powered packing lists, meal planning, gear recommendations, trail maps, weather forecasts, campsite reviews, and a gear swap marketplace in one place.',
 		img: '/campingbuddy.png',
-		icons: ['/re.svg', '/ts.svg', '/tail.svg', '/postgresql.webp', '/openai.webp'],
+		icons: ['/re.svg', '/ts.svg', '/tail.svg', '/express.webp', '/postgresql.webp', '/openai.webp'],
 		link: 'https://campingbuddy.app',
 	},
 	{
-		id: 8,
+		id: 5,
 		title: 'Sherwood Forest',
-		des: 'A mobile banking experience built for the modern era — manage accounts, track your crypto portfolio, monitor investments, and send money, all from one sleek app.',
+		des: 'A mobile banking concept — manage accounts, track a crypto portfolio, monitor investments, and send money, all from one app.',
 		img: '/sherwood.png',
-		icons: ['/re.svg', '/ts.svg', '/nextjs.svg'],
+		icons: ['/re.svg', '/ts.svg'],
 		link: 'https://sherwood.303devs.com',
-	},
-	{
-		id: 9,
-		title: 'MyHealthCoach',
-		des: 'A health and fitness tracking app with workout logging, calorie tracking, and progress visualization. Full-stack PERN application with Docker support, CI/CD pipeline, and Jest test coverage.',
-		img: '/my-health-coach.webp',
-		icons: ['/nextjs.svg', '/nodejs.webp', '/ts.svg', '/postgresql.webp'],
-		link: 'https://github.com/303Devs/MyHealthCoach',
-	},
-	{
-		id: 10,
-		title: 'Red Bean Shop',
-		des: 'A full-featured e-commerce storefront with dynamic product overviews, image galleries, ratings, related items, and a fully functional shopping cart.',
-		img: '/atelier.webp',
-		icons: ['/re.svg', '/redis.webp', '/nginx.webp', '/javascript.webp', '/mongodb.webp'],
-		link: 'https://github.com/303Devs/Red_Bean_Shop',
 	},
 ];

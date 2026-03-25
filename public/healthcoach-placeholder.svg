@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0C081D"/>
+      <stop offset="50%" style="stop-color:#110D24"/>
+      <stop offset="100%" style="stop-color:#1A1F2E"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9300f3;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#9300f3;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#cbacf9;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="accentV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9300f3;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#9300f3;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#9300f3;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.06" stroke="#9300f3" stroke-width="1">
+    <line x1="0" y1="160" x2="1280" y2="160"/>
+    <line x1="0" y1="320" x2="1280" y2="320"/>
+    <line x1="0" y1="480" x2="1280" y2="480"/>
+    <line x1="0" y1="640" x2="1280" y2="640"/>
+    <line x1="256" y1="0" x2="256" y2="800"/>
+    <line x1="512" y1="0" x2="512" y2="800"/>
+    <line x1="768" y1="0" x2="768" y2="800"/>
+    <line x1="1024" y1="0" x2="1024" y2="800"/>
+  </g>
+
+  <!-- Horizontal accent lines -->
+  <line x1="0" y1="250" x2="1280" y2="250" stroke="url(#accent)" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="550" x2="1280" y2="550" stroke="url(#accent)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Vertical accent lines -->
+  <line x1="300" y1="0" x2="300" y2="800" stroke="url(#accentV)" stroke-width="1" opacity="0.4"/>
+  <line x1="980" y1="0" x2="980" y2="800" stroke="url(#accentV)" stroke-width="1" opacity="0.4"/>
+
+  <!-- Purple ambient glow behind icon -->
+  <ellipse cx="640" cy="310" rx="200" ry="120" fill="#9300f3" opacity="0.07" filter="url(#softglow)"/>
+
+  <!-- Heart Icon with pulse line — centered at 640, 280 -->
+  <g filter="url(#glow)">
+    <!-- Heart outline -->
+    <path d="M 640 346 C 640 346 568 300 568 260 C 568 236 587 218 608 218 C 620 218 631 224 640 234 C 649 224 660 218 672 218 C 693 218 712 236 712 260 C 712 300 640 346 640 346 Z"
+          fill="none" stroke="#cbacf9" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Pulse / ECG line through center -->
+    <polyline points="530,282 572,282 586,258 600,310 614,240 626,298 638,282 710,282 750,282"
+              fill="none" stroke="#9300f3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <!-- Pulse line glow dots -->
+    <circle cx="614" cy="240" r="3" fill="#cbacf9" opacity="0.9"/>
+    <circle cx="600" cy="310" r="3" fill="#cbacf9" opacity="0.7"/>
+  </g>
+
+  <!-- Project name -->
+  <text x="640" y="430"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="52"
+        font-weight="700"
+        fill="#ffffff"
+        text-anchor="middle"
+        letter-spacing="-1">MyHealthCoach</text>
+
+  <!-- Subtitle -->
+  <text x="640" y="480"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="22"
+        font-weight="400"
+        fill="#cbacf9"
+        text-anchor="middle"
+        letter-spacing="3"
+        opacity="0.85">HEALTH &amp; FITNESS TRACKER</text>
+
+  <!-- Accent underline under subtitle -->
+  <line x1="510" y1="498" x2="770" y2="498" stroke="url(#accent)" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Corner decorations -->
+  <g stroke="#9300f3" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 40 40 L 40 70 L 70 70"/>
+    <path d="M 1240 40 L 1240 70 L 1210 70"/>
+    <path d="M 40 760 L 40 730 L 70 730"/>
+    <path d="M 1240 760 L 1240 730 L 1210 730"/>
+  </g>
+</svg>
